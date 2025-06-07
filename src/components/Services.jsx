@@ -23,36 +23,6 @@ const Services = () => {
     window.location.href = `tel:${phoneNumber}`;
   };
 
-  const services = [
-    {
-      icon: Store,
-      title: 'In-Store Shopping',
-      subtitle: 'दुकान में खरीदारी',
-      description: 'Visit our physical store and personally select fresh products. Touch, feel, and choose the best quality items for your family.',
-      features: ['Personal Selection', 'Quality Check'],
-      color: 'from-green-400 to-green-600',
-      bgColor: 'bg-green-50'
-    },
-    {
-      icon: CreditCard,
-      title: 'Flexible Payment',
-      subtitle: 'आसान भुगतान',
-      description: 'Pay with cash, card, or UPI. We also offer credit for regular customers based on trust and relationship.',
-      features: ['Cash Payment', 'UPI Available'],
-      color: 'from-indigo-400 to-indigo-600',
-      bgColor: 'bg-indigo-50'
-    },
-    {
-      icon: Phone,
-      title: 'Phone Orders',
-      subtitle: 'फोन से ऑर्डर',
-      description: 'Call us to check product availability or reserve items. We can keep products aside for your visit.',
-      features: ['Product Inquiry', 'Availability Check'],
-      color: 'from-teal-400 to-teal-600',
-      bgColor: 'bg-teal-50'
-    }
-  ];
-
   const storeHours = [
     { day: 'Monday - Saturday', hours: '8:00 AM - 9:00 PM', status: 'open' },
     { day: 'Sunday', hours: '9:00 AM - 10:00 PM', status: 'open' },
@@ -74,37 +44,6 @@ const Services = () => {
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             पारंपरिक सेवा - Personal touch with modern convenience
           </p>
-        </div>
-
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className={`group ${service.bgColor} rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer`}
-              onClick={() => setActiveService(index)}
-            >
-              {/* Icon */}
-              <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                <service.icon className="w-8 h-8 text-white" />
-              </div>
-
-              {/* Content */}
-              <h3 className="text-xl font-bold text-gray-800 mb-2">{service.title}</h3>
-              <p className="text-sm text-gray-600 font-semibold mb-4 font-serif">{service.subtitle}</p>
-              <p className="text-gray-600 mb-4 leading-relaxed">{service.description}</p>
-
-              {/* Features */}
-              <div className="space-y-2">
-                {service.features.map((feature, i) => (
-                  <div key={i} className="flex items-center space-x-2 text-sm">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span className="text-gray-700">{feature}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
         </div>
 
         {/* Store Hours */}

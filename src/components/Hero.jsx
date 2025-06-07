@@ -347,7 +347,7 @@ const Hero = () => {
                         </div>
                         <div className="flex-1">
                           <p className="font-semibold text-gray-800">Licensed & Certified</p>
-                          <p className="text-sm text-gray-600">Food Safety License: FS/2024/001</p>
+                          <p className="text-sm text-gray-600">Food Safety License: FS-21522071001871</p>
                         </div>
                       </div>
                     </div>
